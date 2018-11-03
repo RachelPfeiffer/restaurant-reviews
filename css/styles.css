@@ -258,6 +258,7 @@ nav h1 a {
 	  font-size: 0.7em;
 		display: block;
 		width: 50%;
+		background-color: green;
 	}
 	#restaurants-list li a {
 	  background-color: orange;
@@ -269,8 +270,27 @@ nav h1 a {
 	  text-align: center;
 		padding: 5px 5px 5px 5px;
 		height: 2em;
-		justify-content: right;
 		min-height: 0px;
-		width: 30%;
+		width: 20px;
 	}
+
+
+	.restaurantHolder {
+
+	}
+}
+
+@media screen and (min-width: 500px) {
+	#restaurants-list {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	#restaurants-list {
+		max-width: 900px;
+	}
+
+	#map {
+		max-width: 800px;
 }
