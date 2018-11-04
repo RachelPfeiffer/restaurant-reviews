@@ -191,6 +191,7 @@ nav h1 a {
 	  margin-left: 4vw;
 		padding-top: 4vw;
 		margin-bottom: 0;
+		display: inline-block;
 	}
 
 	.filter-options select {
@@ -205,8 +206,6 @@ nav h1 a {
 	  width: calc(35%-10px);
 		height: 20px;
 		min-height: 0px;
-		max-height: 0px;
-		display: inline-block;
 	}
 
 #restaurants-list {
@@ -230,7 +229,6 @@ nav h1 a {
 	  padding: 10px;
 	  text-align: left;
 		margin: 0 auto;
-		max-height: 100%;
 	}
 	#restaurants-list .restaurant-img {
 	  background-color: #ccc;
@@ -247,6 +245,7 @@ nav h1 a {
 	  font-weight: 200;
 	  letter-spacing: 0;
 	  line-height: 1.2em;
+		height: 3em;
 	  margin: 0;
 		text-align: center;
 	  text-transform: uppercase;
@@ -254,35 +253,36 @@ nav h1 a {
 	}
 	#restaurants-list p {
 	  margin-top: 6%;
-		margin-bottom: 2%;
 	  font-size: 0.7em;
-		display: block;
+		display: inline-block;
 		width: 50%;
-		background-color: green;
+		border: white 1px solid;
 	}
+
 	#restaurants-list li a {
 	  background-color: orange;
 	  border-bottom: 3px solid #eee;
 	  color: #fff;
-	  display: block;
+	  display: inline-block;
 	  font-size: 0.7em;
-	  margin: auto 30%;
+	  margin: 5%;
 	  text-align: center;
 		padding: 5px 5px 5px 5px;
 		height: 2em;
 		min-height: 0px;
 		width: 20px;
+		grid-area: 1 / 4 / span 2 / span 1;
+		margin-top: 10%;
+		float: none;
 	}
 
-
-	.restaurantHolder {
-
-	}
 }
 
 @media screen and (min-width: 500px) {
-	#restaurants-list {
-			grid-template-columns: 1fr 1fr 1fr 1fr;
+
+
+	#map {
+		max-height: 300px;
 	}
 }
 
@@ -292,5 +292,4 @@ nav h1 a {
 	}
 
 	#map {
-		max-width: 800px;
 }
