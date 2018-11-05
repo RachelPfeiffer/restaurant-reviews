@@ -151,13 +151,14 @@ nav h1 a {
 	margin-top: 3vw;
 }
 
-#restaurants-list p {=
+#restaurants-list p {
 	line-height: 1.2;
 }
 
 .addressHolder {
 	width: 40vw;
 	margin-left: 6px;
+	margin-top: auto;
 }
 
 #restaurants-list li a {
@@ -175,6 +176,7 @@ nav h1 a {
 	margin-top: 9vw;
 	margin-left: -2vw;
 }
+
 
 #breadcrumb {
     padding: 10px 40px 16px;
@@ -301,14 +303,6 @@ nav h1 a {
 
 }
 
-@media screen and (min-width: 770px) {
-	#map {
-		max-height: 300px;
-	}
-	#restaurants-list {
-		max-width: 500px;
-	}
-}
 
 .one-map { width: 40% !important;
 	display: block;
@@ -400,4 +394,16 @@ nav h1 a {
   bottom: 0;
   position: absolute;
   width: 50%;
+}
+
+@media screen and (min-width: 340px) {
+	#restaurants-list li a {
+		margin: 9vw -1vw 0 2vw;
+	}
+}
+
+@media screen and (min-width: 370px) {
+	p {
+		font-size: 13pt;
+	}
 }
