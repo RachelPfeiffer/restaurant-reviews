@@ -173,10 +173,12 @@ createRestaurantHTML = (restaurant) => {
 
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
+  neighborhood.className = 'neighborhood';
   addressHolder.appendChild(neighborhood);
 
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
+  address.className = 'address';
   addressHolder.appendChild(address);
 
   const more = document.createElement('a');
