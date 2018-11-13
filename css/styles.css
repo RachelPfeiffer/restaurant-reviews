@@ -138,8 +138,8 @@ nav h1 a {
 }
 
 #restaurants-list li h1 {
-  color: #f18200;
-  font-family: Arial,sans-serif;
+  color: orange;
+	font-family: Arial,sans-serif;
   font-size: 2em;
   font-weight: 200;
   line-height: 1;
@@ -307,90 +307,109 @@ nav h1 a {
 }
 
 @media only screen and (min-width: 400px) {
+	#map-container {
+		max-height: 40vw;
+		max-width: 60vw;
+		}
+	#map {
+		max-height: 40vw;
+		margin-left: 40%;
+		}
 	#restaurants-list {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
-		grid-gap: 15px;
-		max-width: 100vw;
+		grid-gap: 10px;
+		margin-left: -5vw;
+		margin-right: 5vw;
 }
 		#restaurants-list li {
-			width: 50vw;
-			height: 100%;
+			max-width: 39vw;
 			display: flex;
 			grid-area: span 1 / span 1;
+			height: auto;
 		}
 
-		#restaurants-list h1 {
-			max-width: 100%;
+		#restaurants-list li h1 {
+			width: 100%;
 			display: block;
 			text-align: center;
-			width: 100%;
+			font-size: 1.4em;
+			height: 2.8em;
+			vertical-align: bottom;
+			margin-bottom: none;
 		}
 
-		#restaurants-list img {
+		#restaurants-list .restaurant-img {
 			display: block;
-			margin: 3px 0 3px 0;
+			max-height: 36vw;
+			width: 100%;
+			margin-top: 0;
 		}
 
 		.addressHolder {
 			width: 50%;
 			display: block;
+			margin-top: -0.4em;
 		}
+
+		.addressHolder p {
+			font-size: 10pt;
+			line-height: 1em;
+			margin-bottom: -0.5em;
+		}
+
+		#restaurants-list li a {
+			height: 1.5em;
+			font-size: 8pt;
+			padding: 7px 5px 7px 5px;
+			max-width: 40%;
+			margin-top: 10%;
+		}
+
+		.neighborhood {
+			font-style: italic;
+			font-size: 7pt;
+		}
+}
+
+@media screen and (min-width: 600px) {
+	#restaurants-list {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	#restaurants-list li {
+		max-width: 26vw;
+	}
+
+	#restaurants-list .restaurant-img {
+		max-height: 26vw;
+	}
+
+
+}
+
+@media screen and (min-width: 700px) {
+
+}
+
+@media screen and (min-width: 800px) {
+	#restaurants-list {
+		margin-left: -3vw;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	#restaurants-list li {
+		max-width: 20vw;
+	}
+
+	#restaurants-list .restaurant-img {
+		max-height: 20vw;
+	}
 }
 
 @media screen and (min-width: 992px) {
   #restaurants-list {
-    display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-gap: 5px;
-  }
-
-	#restaurants-list li {
-		grid-area: span 1;
-		width: 50vw;
-		height: 70vw;
-	}
-
-	#restaurants-list li h1 {
-		font-size: 1.5em;
-		margin-top: 5%;
-		margin-bottom: 5%;
-		text-align: center;
-		order: 1;
-	}
-
-	#restaurants-list .restaurant-img {
-		width: 60%;
-		margin: 0 auto;
-		order: 3;
-	}
-
-	#restaurants-list p {
-		margin: 1%;
-		font-size: 1em;
-	}
-
-	.neighborhood {
-		font-style: italic;
-		font-size: 0.6em;
-	}
-
-	.addressHolder {
-		order: 2;
-		margin-top: -2vw;
-		text-align: center;
-	}
-	#restaurants-list li a {
-		margin: 0;
-		margin-top: 3%;
-		position: relative;
-		bottom: 0;
-		width: 100%;
-		max-height: 5%;
-		font-size: 0.7em;
-		padding-bottom: 8%;
-		min-height: 0px;
-		order: 5;
-	}
+    margin-left: -1vw;
+		max-width: 900px;
 }
