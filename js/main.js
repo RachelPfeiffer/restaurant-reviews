@@ -159,8 +159,13 @@ createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
 
   const name = document.createElement('h1');
-  name.innerHTML = restaurant.name;
   li.append(name);
+
+  const nameLink = document.createElement('a');
+  nameLink.href = DBHelper.urlForRestaurant(restaurant);
+  nameLink.id = 'header-link';
+  nameLink.innerText = restaurant.name;
+  name.append(nameLink);
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
@@ -200,10 +205,13 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     function onClick() {
       window.location.href = marker.options.url;
     }
+    //make markers "un-tab-able"
+    marker._icon.tabIndex="-1";
     self.markers.push(marker);
   });
 
 }
+
 /* addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     // Add marker to the map

@@ -140,7 +140,7 @@ nav h1 a {
 #restaurants-list li h1 {
   color: orange;
 	font-family: Arial,sans-serif;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 200;
   line-height: 1;
   text-transform: uppercase;
@@ -148,6 +148,26 @@ nav h1 a {
 	width: 100%;
 	margin-bottom: -0.5vw;
 	margin-top: 3vw;
+}
+
+#restaurants-list #header-link {
+	background-color: white;
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: orange;
+	font-family: Arial,sans-serif;
+	font-size: 1.5em;
+	font-weight: 200;
+	line-height: 1;
+	text-transform: uppercase;
+	display: block;
+	width: 100%;
+	margin-bottom: -0.5vw;
+	margin-top: 0;
+	margin-left: 0;
+	padding: 0;
+	border-bottom: none;
 }
 
 #restaurants-list p {
@@ -330,11 +350,12 @@ nav h1 a {
 			height: auto;
 		}
 
-		#restaurants-list li h1 {
-			width: 100%;
+		#restaurants-list #header-link {
+			width: 20vw;
+			max-width: 50vw;
 			display: block;
 			text-align: center;
-			font-size: 1.4em;
+			font-size: 1em;
 			height: 2.8em;
 			vertical-align: bottom;
 			margin-bottom: none;
@@ -383,7 +404,9 @@ nav h1 a {
 	}
 
 	#restaurants-list .restaurant-img {
-		max-height: 26vw;
+		max-height: 20vw;
+		max-width: 20vw;
+		margin: auto;
 	}
 
 
@@ -401,10 +424,6 @@ nav h1 a {
 
 	#restaurants-list li {
 		max-width: 20vw;
-	}
-
-	#restaurants-list .restaurant-img {
-		max-height: 20vw;
 	}
 }
 
