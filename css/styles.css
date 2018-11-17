@@ -352,13 +352,14 @@ nav h1 a {
 
 		#restaurants-list #header-link {
 			width: 20vw;
-			max-width: 50vw;
+			max-width: 100vw;
 			display: block;
-			text-align: center;
-			font-size: 1em;
+			text-align: left;
+			font-size: 4em;
 			height: 2.8em;
 			vertical-align: bottom;
 			margin-bottom: none;
+			color: green;
 		}
 
 		#restaurants-list .restaurant-img {
