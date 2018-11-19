@@ -34,7 +34,7 @@
     build         : dir.build + 'images/',
 
     minOpts: {
-      optimizationLevel: 5
+      optimizationLevel:  5
     }
   };
 

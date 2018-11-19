@@ -13,6 +13,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
   fetchCuisines();
 });
 
+/*
+*Install the service worker
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+  console.log("Here's comes a shiny new service worker!")
+}
+*/
 /**
  * Fetch all neighborhoods and set their HTML.
  */
@@ -188,6 +196,7 @@ createRestaurantHTML = (restaurant) => {
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
+  more.className = 'view-restaurant-details';
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more)
 
