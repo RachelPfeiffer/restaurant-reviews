@@ -215,7 +215,8 @@ nav h1 a {
 	max-height: 80vw;
 }
 
-#restaurant-cuisine {
+#restaurant-cuisine
+ {
 	background-color: #333;
   color: #ddd;
   font-size: 12pt;
@@ -228,26 +229,28 @@ nav h1 a {
 	width: 100%;
 }
 
-p#restaurant-address, table, #reviews-container {
+/* ================ hours and reviews ================= */
+p#restaurant-address, #restaurant-hours, #reviews-container {
 	background-color: #fff;
+	background: linear-gradient(to bottom, #333 0%, #333 50px, white 50px, white 100%);
 	width: 85vw;
 	margin: auto;
-	border-radius: 0 0 10px 10px;
+	border-radius: 10px;
 	font-size: 1.4em;
 }
 
-p#restaurant-address h2, h3, section#reviews-container h2, #reviews-list p.name {
-	background-color: #333;
+/* ===================== black headers ================= */
+
+p#restaurant-address h2, div#restaurant-hours h2, section#reviews-container h2, #reviews-list p.name {
 	color: #ddd;
 	width: 80vw;
 	height: 100%;
-	margin-block-start: 0px;
-	margin-block-end: 0px;
 	border-radius:  10px 10px 0 0;
 	padding: 10px;
 	font-size: 1.1em;
 }
 
+/* =============== Restaurant Hours ==================== */
 h3 {
 	margin: 20px auto auto auto;
 	font-size: 1.5em;
@@ -258,6 +261,7 @@ td {
 	line-height: 2em;
 }
 
+/* ================= Reviews Container ================= */
 #reviews-container {
 	margin-top: 20px;
 	background-color: #fdfdfd;
@@ -270,32 +274,32 @@ td {
 }
 
 #reviews-list li {
-	list-style: none;
-	margin-left: -35px;
-	border-right: 2px solid #ccc;
-	border-left: 2px solid #ccc;
+	width: 100%;list-style: none;
 	border-bottom: 2px solid #ccc;
-	border-radius: 10px;
-	background-color: white;
 	padding: 3px;
+	margin-left: -1.8em;
+	background: linear-gradient(to bottom, #404142 0%, #404142 45px, #eff0f2 45px, #eff0f2 100%);
 }
 
 #reviews-list p.comments {
-	font-size: 1.5em;
+	font-size: 1em;
 }
 
 #reviews-list p.name {
 	width: 96%;
 	margin-left: -1.8%;
+	margin-top: -1%;
 	font-size: 1.5em;
+	margin-bottom: -4%;
+	color: #ddd;
 }
 
 #reviews-list p.rating {
-	float: right;
-	margin-top: -10%;
+	display: inline;
+	margin-top: -2.5em;
 	background-color: orange;
 	color: white;
-	font-size: 1em;
+	font-size: 1.2em;
 	padding: 5px 10px 5px 10px;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -305,11 +309,187 @@ td {
 #reviews-list p.date {
 	font-style: italic;
 	font-size: 0.8em;
+	margin-top: -4%;
+	color: #ddd;
 }
 
+/* ==================== footer ========================= */
 .inside #footer {
   bottom: 0;
   width: 90%;
 	display: block;
 	margin: auto;
+}
+
+
+/* Now for media queries! Mobile starts looking silly at around
+400px...*/
+
+@media only screen and (min-width: 420px) {
+#map {
+	max-height: 550px;
+	}/*switch to grid view, show picture across whole tile and
+address and view detail button side by side*/
+	#restaurants-list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-gap: 3px;
+	}
+
+	#restaurants-list li {
+		max-width: 45vw;
+		display: flex;
+		grid-area: span 1 / span 1;
+		height: auto;
+		margin: auto;
+	}
+
+	#header-link {
+		max-width: 45vw;
+		font-size: 1.1em;
+		height: 2.2em;
+		text-align: center;
+		margin-left: -2.5vw;
+	}
+
+	#restaurants-list .restaurant-img {
+		width: 80%;
+		max-height: 30vw;
+		margin: -5px auto auto auto;
+	}
+
+	.addressHolder {
+		width: 50%;
+		display: block;
+		margin-top: -0.4em;
+	}
+
+	.addressHolder p {
+		font-size: 10pt;
+		line-height: 1em;
+		margin-bottom: -0.5em;
+	}
+
+	#restaurants-list li a.view-restaurant-details {
+		max-width: 30%;
+		font-size: 0.8em;
+	}
+
+/*Make filter options fit in the view window.*/
+.filter-options {
+	height: 80px;
+	}
+
+.filter-options h2 {
+	width: auto;
+	font-size: 1.2em;
+	margin-right: 15px;
+}
+
+.filter-options select {
+	width: auto;
+	margin: 8px;
+}
+
+/*Get the hours back on one line*/
+td {
+	font-size: 0.7em;
+}
+/*Get the dates in the detail screen to go lower,
+move ratings down, extend black header.*/
+#reviews-list p.name {
+margin-bottom: 2%;
+}
+
+#reviews-list li {
+	background: linear-gradient(to bottom, #404142 0%, #404142 55px, #eff0f2 55px, #eff0f2 100%);
+}
+
+#reviews-list p.rating {
+margin-top: 1em;
+}
+
+/*Everything looks good again until 580px.*/
+@media screen and (min-width: 580px) {
+	#restaurants-list {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	#restaurants-list li {
+		max-width: 30vw;
+	}
+
+	#restaurants-list .restaurant-img {
+		max-height: 20vw;
+		max-width: 20vw;
+		margin: -5px auto 10px auto;
+	}
+
+	#header-link {
+		max-width: 28vw;
+		margin: auto;
+		font-size: 1.1em;
+	}
+
+	#restaurants-list li a.view-restaurant-details {
+		max-width: 30%;
+		font-size: 0.8em;
+		margin: auto;
+		border-radius: 8px;
+		line-height: 16px;
+	}
+
+	.addressHolder{
+		margin-bottom: 5px;
+		height: 36px;
+	}
+/*TODO Get the map on the side and the pic on the other.*/
+	/*Get the commenter names to stop going off the left of the screen*/
+#reviews-list p.name {
+			margin-left: 0;
+	}
+
+	#restaurants-list li {
+max-width: 500px;
+margin: auto;
+}
+}
+
+@media screen and (min-width: 800px) {
+	#restaurants-list {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-gap: 8px;
+	}
+
+	#restaurants-list li {
+		max-width: 22vw;
+		height: 100%;
+		margin-bottom: 15px;
+	}
+
+	#header-link {
+		max-width: 20vw;
+		font-size: 1.2em;
+	}
+
+	#restaurants-list .restaurant-img {
+		max-height: 10vw;
+		max-width: 12vw;
+		margin: -5px auto 10px auto;
+	}
+
+	.addressHolder {
+		margin-bottom: 5px;
+		height: 4em;
+	}
+
+	p.address {
+		font-size: 1em;
+	}
+
+	#restaurants-list p.neighborhood {
+		font-size: 1em;
+		font-weight: bold;
+	}
 }
