@@ -209,7 +209,6 @@ nav h1 a {
 }
 
 .restaurant-img {
-	max-width: 100vw;
 	width: 100vw;
 	max-width: none;
 	max-height: 80vw;
@@ -429,7 +428,7 @@ margin-top: 1em;
 	#header-link {
 		max-width: 28vw;
 		margin: auto;
-		font-size: 1.1em;
+		font-size: 1.5em;
 	}
 
 	#restaurants-list li a.view-restaurant-details {
@@ -444,8 +443,54 @@ margin-top: 1em;
 		margin-bottom: 5px;
 		height: 36px;
 	}
-/*TODO Get the map on the side and the pic on the other.*/
+/*Get the map on the side and the pic on the other.*/
+#infomap-container {
+	width: 100%;
+	border-radius: 10px;
+	max-height: 50vh;
+}
+
+img#restaurant-img.one-restaurant {
+	width: 50%;
+	border-radius: 10px;
+	margin-top: -40%;
+	max-height: 50vh;
+}
+
+/*Get the hours and address on one side and the comments on the other.*/
+p#restaurant-address, div#restaurant-hours {
+	width: 30%;
+	font-size: 1em;
+	background: linear-gradient(to bottom, #333 0%, #333 38px, white 38px, white 100%);
+	margin-left: 5%;
+}
+
+p#restaurant-address {}
+
+div#restaurant-hours {}
+
+td {
+	font-size: 1.2em;
+}
+
+section#reviews-container {
+	width: 60%;
+	margin-left: 40%;
+	position: absolute;
+	top: 500px;
+	margin-bottom: 100px;
+}
+
+#reviews-list li p.comments {
+	font-size: 1.2em;
+}
+
+/*TODO stick the footer to the bottom of the screen*/
+.inside #footer {
+	position: fixed;
+}
 	/*Get the commenter names to stop going off the left of the screen*/
+
 #reviews-list p.name {
 			margin-left: 0;
 	}
