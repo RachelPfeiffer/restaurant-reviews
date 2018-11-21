@@ -445,7 +445,7 @@ margin-top: 1em;
 	}
 /*Get the map on the side and the pic on the other.*/
 #infomap-container {
-	width: 40%;
+	width: 100%;
 	border-radius: 10px;
 	max-height: 50vh;
 }
@@ -453,7 +453,7 @@ margin-top: 1em;
 img#restaurant-img.one-restaurant {
 	width: 50%;
 	border-radius: 10px;
-	margin-right: 2%;
+	margin-top: -40%;
 	max-height: 50vh;
 }
 
@@ -475,13 +475,17 @@ td {
 
 section#reviews-container {
 	width: 60%;
+	margin-left: 40%;
+	position: absolute;
+	top: 500px;
+	margin-bottom: 100px;
 }
 
 #reviews-list li p.comments {
 	font-size: 1.2em;
 }
 
-/*TODO now implement a grid layout for this page*/
+/*TODO stick the footer to the bottom of the screen*/
 .inside #footer {
 	position: fixed;
 }

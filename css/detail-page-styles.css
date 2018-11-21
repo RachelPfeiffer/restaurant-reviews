@@ -1,0 +1,276 @@
+
+/* ================ Details Page ====================*/
+
+/* ================== Breadcrumb ======================= */
+
+#breadcrumb {
+    padding: 10px 40px 16px;
+    list-style: none;
+    background-color: #eee;
+    font-size: 17px;
+    margin: 0;
+}
+
+
+/* Display list items side by side */
+#breadcrumb li {
+    display: inline;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+#breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+#breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+#breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+/* TODO Keep all content visible, no vertical scroll. */
+
+/* ======================== Map ======================== */
+#infomap-container {
+  height: 60vw;
+  }
+
+#map {
+  height: 100%;
+  width: 100vw;
+}
+
+/* ============== Restaurant Name ====================== */
+#restaurant-name {
+	width: 100vw;
+	font-size: 2em;
+	color: orange;
+	text-transform: uppercase;
+  text-align: center;
+}
+
+/*=============== Main Pic ========================== */
+
+.restaurant-img {
+	width: 100vw;
+	max-width: 100vw;
+	max-height: 80vw;
+}
+
+/*=============== Cuisine Div ========================== */
+#restaurant-cuisine {
+	background-color: #333;
+  color: #ddd;
+  font-size: 12pt;
+  font-weight: 300;
+  letter-spacing: 10px;
+  margin: 0 0 20px;
+  padding: 2px 0;
+  text-align: center;
+  text-transform: uppercase;
+	width: 100%;
+}
+
+/* ================ hours and reviews ================= */
+p#restaurant-address, #restaurant-hours, #reviews-container {
+	background-color: #fff;
+	background: linear-gradient(to bottom, #333 0%, #333 50px, white 50px, white 100%);
+	width: 85vw;
+	margin: auto;
+	border-radius: 10px;
+	font-size: 1.4em;
+}
+
+/* ===================== black headers ================= */
+
+p#restaurant-address h2, div#restaurant-hours h2, section#reviews-container h2, #reviews-list p.name {
+	color: #ddd;
+	width: 80vw;
+	height: 100%;
+	border-radius:  10px 10px 0 0;
+	padding: 10px;
+	font-size: 1.1em;
+}
+
+/* =============== Restaurant Hours ==================== */
+h3 {
+	margin: 20px auto auto auto;
+	font-size: 1.5em;
+}
+
+td {
+	font-size: 0.9em;
+	line-height: 2em;
+}
+
+/* ================= Reviews Container ================= */
+#reviews-container {
+	margin-top: 20px;
+	background-color: #fdfdfd;
+	}
+
+#reviews-container h2 {
+	font-size: 2em;
+	padding: 10px;
+	margin: 10px auto 0 auto;
+}
+
+#reviews-list li {
+	width: 100%;
+  list-style: none;
+	border-bottom: 2px solid #ccc;
+	padding: 3px;
+	margin-left: -1.8em;
+	background: linear-gradient(to bottom, #404142 0%, #404142 45px, #eff0f2 45px, #eff0f2 100%);
+}
+
+#reviews-list p.name {
+	width: 96%;
+	margin-left: -1.8%;
+	margin-top: -1%;
+	font-size: 1.5em;
+	margin-bottom: -4%;
+	color: #ddd;
+}
+
+#reviews-list p.rating {
+	display: inline;
+	margin-top: -2.5em;
+	background-color: orange;
+	color: white;
+	font-size: 1.2em;
+	padding: 5px 10px 5px 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: -1%;
+}
+
+#reviews-list p.date {
+	font-style: italic;
+	font-size: 0.8em;
+	margin-top: -4%;
+	color: #ddd;
+}
+
+
+#reviews-list p.comments {
+	font-size: 1.2em;
+}
+/* ==================== footer ========================= */
+.inside #footer {
+  bottom: 0;
+  width: 90%;
+	display: block;
+	margin: auto;
+}
+
+
+@media only screen and (min-width: 450px) {
+/*top section should be 100% width of top, bottom should be 100% of bottom*/
+#top-section {
+  width: 100%;
+}
+
+#bottom-section {
+  width: 100%;
+}
+
+/* Map should be on one side, picture on the other. */
+#infomap-container {
+border-radius: 10px;
+width: 50%;
+height: 200px;
+}
+
+#map {
+  height: 100px;
+  width: 100px;
+  }
+/*Get the dates in the detail screen to go lower,
+move ratings down, extend black header.*/
+#reviews-list p.name {
+margin-bottom: 2%;
+}
+
+#reviews-list li {
+	background: linear-gradient(to bottom, #404142 0%, #404142 55px, #eff0f2 55px, #eff0f2 100%);
+}
+
+#reviews-list p.rating {
+margin-top: 1em;
+}
+
+
+
+  /*  #maincontent {
+    display: grid;
+    grid-template-columns: repeat(100px, 10);
+    grid-template-rows: repeat(100px,10);
+    grid-template-areas:
+      'map map map map map pic pic pic pic pic'
+      'map map map map map pic pic pic pic pic'
+      'map map map map map pic pic pic pic pic'
+      'name name name name name pic pic pic pic pic'
+      'cuis cuis cuis cuis cuis cuis cuis cuis cuis'
+      'addr addr addr rev rev rev rev rev rev rev'
+      'addr addr addr rev rev rev rev rev rev rev'
+      'hours hours hours rev rev rev rev rev rev rev'
+      'hours hours hours rev rev rev rev rev rev rev'
+      'hours hours hours rev rev rev rev rev rev rev'
+    }*/
+
+
+
+  img#restaurant-img.one-restaurant {
+  	grid-area: pic;
+    width: 40vw;
+  	border-radius: 10px;
+    height: 100px;
+  }
+
+  /*Get the hours and address on one side and the comments on the other.*/
+  p#restaurant-address, div#restaurant-hours {
+  	width: 30%;
+  	font-size: 1em;
+  	background: linear-gradient(to bottom, #333 0%, #333 38px, white 38px, white 100%);
+  	margin-left: 5%;
+  }
+
+  p#restaurant-address {}
+
+  div#restaurant-hours {}
+
+  td {
+  	font-size: 1.2em;
+  }
+
+  section#reviews-container {
+  	width: 60%;
+  	margin-left: 40%;
+  	position: absolute;
+  	top: 500px;
+  	margin-bottom: 100px;
+  }
+
+  #reviews-list li p.comments {
+  	font-size: 1.2em;
+  }
+
+  /*TODO stick the footer to the bottom of the screen*/
+  .inside #footer {
+  	position: fixed;
+  }
+  	/*Get the commenter names to stop going off the left of the screen*/
+
+  #reviews-list p.name {
+  			margin-left: 0;
+  	}
+}

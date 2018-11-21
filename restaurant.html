@@ -6,7 +6,8 @@
   <!-- Normalize.css for better cross-browser consistency -->
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <!-- Main CSS file -->
-  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <link rel="stylesheet" href="css/detail-page-styles.css" type="text/css">
+  <link rel="stylesheet" href="css/shared-styles.css" type="text/css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
   <title>Restaurant Info</title>
 </head>
@@ -29,6 +30,8 @@
 
   <!-- Beginning main -->
   <main id="maincontent">
+    <!-- top section: map, name, picture, cuisine -->
+    <section id="top-section">
     <!-- Beginning map -->
     <section id="infomap-container">
       <div id="map" class="one-map"></div>
@@ -39,17 +42,18 @@
     <h2 id="restaurant-name"></h2>
       <img id="restaurant-img" class="one-restaurant-img" >
       <p id="restaurant-cuisine"></p>
-      <p id="restaurant-address"></p>
-    </section
-
     </section>
+  </section>
+  <!-- bottom section: address, hours, reviews -->
+  <section id="bottom-section">
+      <p id="restaurant-address"></p>
     <!-- end restaurant -->
     <!-- Beginning reviews -->
     <div id="restaurant-hours"></div>
       <section id="reviews-container">
       <ul id="reviews-list"></ul>
     </section>
-    <!-- End reviews -->
+  </section>
   </main>
   <!-- End main -->
 

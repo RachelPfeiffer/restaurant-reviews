@@ -1,0 +1,259 @@
+@charset "utf-8";
+/* CSS Document */
+/* ======================= Map ========================= */
+#map {
+	height: 50vh;
+	width: 90%;
+	background-color: #ccc;
+	margin: 0 auto;
+}
+
+/* ============ Restaurant Filtering =================== */
+.filter-options {
+	width: 100vw;
+	height: 15vw;
+	background-color: #3397DB;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.filter-options h2 {
+	color: white;
+	font-size: 1em;
+	margin-left: 4vw;
+	width: 30%;
+	margin-top: 5%;
+	font-weight: lighter;
+
+}
+
+.filter-options select {
+	display: block;
+	border: 1px solid #fff;
+	font-size: 10pt;
+  letter-spacing: 0;
+	width: 30%;
+	height:70%;
+	min-height: 45px;
+	min-width: 45px;
+	margin: auto;
+	border-radius: 5px;
+	background-color: white;
+}
+
+/* ====================== Restaurant Listing ====================== */
+/*for list container*/
+#restaurants-list {
+  background-color: #f3f3f3;
+  list-style: outside none none;
+	width: 100%;
+	padding-inline-start: 0px;
+}
+
+/*for restaurant tiles*/
+#restaurants-list li {
+  background-color: #fff;
+	border: 2px solid #ccc;
+	font-family: Arial, sans-serif;
+	padding: 0 10px 8px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/*for each restaurant name*/
+#header-link {
+  font-size: 1.3em;
+  font-weight: 200;
+  text-transform: uppercase;
+	width: 95vw;
+	display: block;
+}
+
+/*for the address*/
+.addressHolder {
+	width: 40vw;
+	margin-left: 6px;
+	margin-top: 0;
+}
+
+/*for the view details button*/
+.view-restaurant-details {
+	background-color: orange;
+  border-bottom: 3px solid #eee;
+  color: #fff;
+	width: 70px;
+	height: 45px;
+	font-size: 1.1em;
+	text-align: center;
+	padding-top: 5%;
+	margin-left: 6%;
+	margin-top: 5%;
+	text-transform: uppercase;
+}
+
+/*for the restaurant image*/
+#restaurants-list .restaurant-img {
+	width: 23vw;
+	max-height: 23vw;
+}
+
+
+
+
+/* Now for media queries! Mobile starts looking silly at around
+400px...*/
+
+@media only screen and (min-width: 420px) {
+#map {
+	max-height: 550px;
+	}
+
+/*switch to grid view, show picture across whole tile and
+address and view detail button side by side*/
+	#restaurants-list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-gap: 3px;
+	}
+
+	#restaurants-list li {
+		max-width: 45vw;
+		display: flex;
+		grid-area: span 1 / span 1;
+		height: auto;
+		margin: auto;
+	}
+
+	#header-link {
+		max-width: 45vw;
+		font-size: 1.1em;
+		height: 2.2em;
+		text-align: center;
+		margin-left: -2.5vw;
+	}
+
+	#restaurants-list .restaurant-img {
+		width: 80%;
+		max-height: 30vw;
+		margin: -5px auto auto auto;
+	}
+
+	.addressHolder {
+		width: 50%;
+		display: block;
+		margin-top: -0.4em;
+	}
+
+	.addressHolder p {
+		font-size: 10pt;
+		line-height: 1em;
+		margin-bottom: -0.5em;
+	}
+
+	#restaurants-list li a.view-restaurant-details {
+		max-width: 30%;
+		font-size: 0.8em;
+	}
+
+/*Make filter options fit in the view window.*/
+.filter-options {
+	height: 80px;
+	}
+
+.filter-options h2 {
+	width: auto;
+	font-size: 1.2em;
+	margin-right: 15px;
+}
+
+.filter-options select {
+	width: auto;
+	margin: 8px;
+}
+
+/*Get the hours back on one line*/
+td {
+	font-size: 0.7em;
+}
+}
+
+/*Everything looks good again until 580px.*/
+@media screen and (min-width: 580px) {
+	#restaurants-list {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	#restaurants-list li {
+		max-width: 30vw;
+	}
+
+	#restaurants-list .restaurant-img {
+		max-height: 20vw;
+		max-width: 20vw;
+		margin: -5px auto 10px auto;
+	}
+
+	#header-link {
+		max-width: 28vw;
+		margin: auto;
+		font-size: 1.5em;
+	}
+
+	#restaurants-list li a.view-restaurant-details {
+		max-width: 30%;
+		font-size: 0.8em;
+		margin: auto;
+		border-radius: 8px;
+		line-height: 16px;
+	}
+
+	.addressHolder{
+		margin-bottom: 5px;
+		height: 36px;
+	}
+
+
+	#restaurants-list li {
+max-width: 500px;
+margin: auto;
+}
+}
+
+@media screen and (min-width: 800px) {
+	#restaurants-list {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-gap: 8px;
+	}
+
+	#restaurants-list li {
+		max-width: 22vw;
+		height: 100%;
+		margin-bottom: 15px;
+	}
+
+	#header-link {
+		max-width: 20vw;
+		font-size: 1.2em;
+	}
+
+	#restaurants-list .restaurant-img {
+		max-height: 10vw;
+		max-width: 12vw;
+		margin: -5px auto 10px auto;
+	}
+
+	.addressHolder {
+		margin-bottom: 5px;
+		height: 4em;
+	}
+
+	p.address {
+		font-size: 1em;
+	}
+
+	#restaurants-list p.neighborhood {
+		font-size: 1em;
+		font-weight: bold;
+	}
+}
