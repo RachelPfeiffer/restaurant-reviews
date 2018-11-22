@@ -176,24 +176,53 @@ td {
 @media only screen and (min-width: 450px) {
 /*top section should be 100% width of top, bottom should be 100% of bottom*/
 #top-section {
-  width: 100%;
+  max-width: 100%;
+  display: flex;
+  max-height: 70vw;
 }
 
-#bottom-section {
-  width: 100%;
+#restaurant-container {
+height: 400px;
+}
+
+#restaurant-name {
+  text-align: left;
+  width: 55vw;
+  padding-left: 2vw;
 }
 
 /* Map should be on one side, picture on the other. */
 #infomap-container {
 border-radius: 10px;
-width: 50%;
-height: 200px;
+order: 1;
+width: 30vw;
+max-height: 300px;
+margin-top: 10%;
 }
 
 #map {
-  height: 100px;
-  width: 100px;
-  }
+  max-height: 100%;
+  width: 35vw;
+  border: orange 5px dotted;
+}
+
+img#restaurant-img.one-restaurant {
+  border-radius: 10px;
+  max-height: 70%;
+  width: 51vw;
+  margin: 0 2vw 0 2vw;
+}
+
+#restaurant-cuisine {
+  width: 55vw;
+}
+
+#bottom-section {
+  width: 100%;
+  background-color: purple;
+}
+
+
 /*Get the dates in the detail screen to go lower,
 move ratings down, extend black header.*/
 #reviews-list p.name {
@@ -229,19 +258,12 @@ margin-top: 1em;
 
 
 
-  img#restaurant-img.one-restaurant {
-  	grid-area: pic;
-    width: 40vw;
-  	border-radius: 10px;
-    height: 100px;
-  }
+
 
   /*Get the hours and address on one side and the comments on the other.*/
   p#restaurant-address, div#restaurant-hours {
-  	width: 30%;
   	font-size: 1em;
   	background: linear-gradient(to bottom, #333 0%, #333 38px, white 38px, white 100%);
-  	margin-left: 5%;
   }
 
   p#restaurant-address {}
@@ -253,11 +275,6 @@ margin-top: 1em;
   }
 
   section#reviews-container {
-  	width: 60%;
-  	margin-left: 40%;
-  	position: absolute;
-  	top: 500px;
-  	margin-bottom: 100px;
   }
 
   #reviews-list li p.comments {
@@ -266,11 +283,9 @@ margin-top: 1em;
 
   /*TODO stick the footer to the bottom of the screen*/
   .inside #footer {
-  	position: fixed;
   }
   	/*Get the commenter names to stop going off the left of the screen*/
 
   #reviews-list p.name {
-  			margin-left: 0;
   	}
 }
