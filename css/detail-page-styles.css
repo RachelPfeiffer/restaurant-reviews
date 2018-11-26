@@ -101,8 +101,8 @@ p#restaurant-address h2, div#restaurant-hours h2, section#reviews-container h2, 
 }
 
 /* =============== Restaurant Hours ==================== */
-h3 {
-	margin: 20px auto auto auto;
+h2 {
+	margin: auto auto auto auto;
 	font-size: 1.5em;
 }
 
@@ -179,29 +179,32 @@ td {
   max-width: 100%;
   display: flex;
   max-height: 70vw;
+  margin-left: 8vw;
 }
 
 #restaurant-container {
-height: 400px;
+height: 100%;
+width: 50vw;
 }
 
 #restaurant-name {
   text-align: left;
   width: 55vw;
   padding-left: 2vw;
+  max-height: 30%;
+text-shadow: 1px 1px 2px yellow;
 }
 
 /* Map should be on one side, picture on the other. */
 #infomap-container {
 border-radius: 10px;
 order: 1;
-width: 30vw;
-max-height: 300px;
-margin-top: 10%;
+width: 40vw;
+max-height: 28em;
 }
 
 #map {
-  max-height: 100%;
+  max-height: 95%;
   width: 35vw;
   border: orange 5px dotted;
 }
@@ -210,21 +213,27 @@ img#restaurant-img.one-restaurant {
   border-radius: 10px;
   max-height: 70%;
   width: 51vw;
+  max-width: 70%;
   margin: 0 2vw 0 2vw;
 }
 
 #restaurant-cuisine {
   width: 55vw;
+  max-width: 75%;
 }
 
 #bottom-section {
   width: 100%;
-  background-color: purple;
 }
 
 
 /*Get the dates in the detail screen to go lower,
 move ratings down, extend black header.*/
+section#reviews-container h2 {
+  font-size: 1.3em;
+  margin-top: -0.2em;
+}
+
 #reviews-list p.name {
 margin-bottom: 2%;
 }
@@ -238,43 +247,36 @@ margin-top: 1em;
 }
 
 
-
-  /*  #maincontent {
-    display: grid;
-    grid-template-columns: repeat(100px, 10);
-    grid-template-rows: repeat(100px,10);
-    grid-template-areas:
-      'map map map map map pic pic pic pic pic'
-      'map map map map map pic pic pic pic pic'
-      'map map map map map pic pic pic pic pic'
-      'name name name name name pic pic pic pic pic'
-      'cuis cuis cuis cuis cuis cuis cuis cuis cuis'
-      'addr addr addr rev rev rev rev rev rev rev'
-      'addr addr addr rev rev rev rev rev rev rev'
-      'hours hours hours rev rev rev rev rev rev rev'
-      'hours hours hours rev rev rev rev rev rev rev'
-      'hours hours hours rev rev rev rev rev rev rev'
-    }*/
-
-
-
-
-
   /*Get the hours and address on one side and the comments on the other.*/
-  p#restaurant-address, div#restaurant-hours {
+  p#restaurant-address, div#restaurant-hours, section#reviews-container {
   	font-size: 1em;
   	background: linear-gradient(to bottom, #333 0%, #333 38px, white 38px, white 100%);
+    margin-left: 30px;
+    padding-left: 15px;
   }
 
-  p#restaurant-address {}
-
-  div#restaurant-hours {}
+div#address-hours, p#restaurant-address, div#restaurant-hours {
+  width: 30vw;
+  margin-bottom: 30px;
+}
 
   td {
   	font-size: 1.2em;
   }
 
-  section#reviews-container {
+  section#bottom-section h2 {
+    max-width: 100%;
+  }
+
+    section#reviews-container {
+      width: 50vw;
+      margin-left: 80px;
+      margin-top: 1px;
+    }
+
+  section#bottom-section {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   #reviews-list li p.comments {
