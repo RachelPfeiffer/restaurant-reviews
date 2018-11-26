@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 /*Install the service worker*/
 
-navigator.serviceWorker.register('js/sw.js').then(function() {
-  console.log("Service worker registered successfully");
+navigator.serviceWorker.register('service_worker.js').then(function() {
+  console.log("we  will keep trying!! No giving up!!");
 }).catch(function() {
   console.log("but it's all gone.");
 })
