@@ -1,5 +1,4 @@
 self.addEventListener('install', function(event) {
-  console.log('installing *thirty-fifth* SW');
   event.waitUntil(
     caches.open('reviews-cache-v6').then(function (cache) {
 cache.addAll([
@@ -23,14 +22,8 @@ cache.addAll([
   'js/restaurant_info.js'
 ])  }))
 });
-self.addEventListener('activate', function(event) {
-  console.log('activating *thirty-fifth* SW');
-});
-
-console.log(caches.match);
 
 self.addEventListener('fetch', function(event) {
-console.log(event.request);
 caches.match(event.request).then(function (response) {
   if(response) return response;
   return fetch(event.request);

@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 /*Install the service worker*/
 
 navigator.serviceWorker.register('service_worker.js').then(function() {
-  console.log("we  will keep trying!! No giving up!!");
+  console.log("Service worker successfully registered.");
 }).catch(function() {
-  console.log("but it's all gone.");
+  console.log("Sorry - No service worker registered.");
 })
 
 /**
@@ -97,18 +97,6 @@ initMap = () => {
 
   updateRestaurants();
 }
-/* window.initMap = () => {
-  let loc = {
-    lat: 40.722216,
-    lng: -73.987501
-  };
-  self.map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 12,
-    center: loc,
-    scrollwheel: false
-  });
-  updateRestaurants();
-} */
 
 /**
  * Update page and map for current restaurants.
@@ -222,14 +210,3 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 
 }
-
-/* addMarkersToMap = (restaurants = self.restaurants) => {
-  restaurants.forEach(restaurant => {
-    // Add marker to the map
-    const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.map);
-    google.maps.event.addListener(marker, 'click', () => {
-      window.location.href = marker.url
-    });
-    self.markers.push(marker);
-  });
-} */
