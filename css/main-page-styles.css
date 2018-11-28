@@ -22,7 +22,6 @@
 	font-size: 1em;
 	margin-left: 4vw;
 	width: 30%;
-	margin-top: 5%;
 	font-weight: lighter;
 
 }
@@ -189,15 +188,16 @@ td {
 	}
 
 	#restaurants-list .restaurant-img {
-		max-height: 20vw;
-		max-width: 20vw;
+		max-height: 15vw;
+		height: 60%;
+		max-width: 50vw;
 		margin: -5px auto 10px auto;
 	}
 
 	#header-link {
 		max-width: 28vw;
 		margin: auto;
-		font-size: 1.5em;
+		font-size: 1em;
 	}
 
 	#restaurants-list li a.view-restaurant-details {
@@ -234,7 +234,7 @@ margin: auto;
 
 	#header-link {
 		max-width: 20vw;
-		font-size: 1.2em;
+		font-size: 1.1em;
 	}
 
 	#restaurants-list .restaurant-img {

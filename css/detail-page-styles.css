@@ -185,11 +185,12 @@ td {
 #restaurant-container {
 height: 100%;
 width: 50vw;
+margin-left: -4vw;
 }
 
 #restaurant-name {
   text-align: left;
-  width: 55vw;
+  max-width: 47vw;
   padding-left: 2vw;
   max-height: 30%;
 text-shadow: 1px 1px 2px yellow;
