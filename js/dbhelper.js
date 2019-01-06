@@ -8,9 +8,9 @@ class DBHelper {
    * Change this to restaurants.json file location on your server.
    */
   static get DATABASE_URL() {
-    const port = 8080 // Change this to your server port
-    return `http://localhost:${port}/data/restaurants.json`;
+    return `https://rachelpfeiffer.github.io/restaurant-reviews//data/restaurants.json`;
   }
+  
 
   /**
    * Fetch all restaurants.
