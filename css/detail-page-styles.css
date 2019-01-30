@@ -257,12 +257,13 @@ margin-top: 1em;
   }
 
 div#address-hours, p#restaurant-address, div#restaurant-hours {
-  width: 30vw;
+  width: 70vw;
+  margin: auto;
   margin-bottom: 30px;
 }
 
   td {
-  	font-size: 1.2em;
+  	font-size: 1em;
   }
 
   section#bottom-section h2 {
@@ -270,9 +271,9 @@ div#address-hours, p#restaurant-address, div#restaurant-hours {
   }
 
     section#reviews-container {
-      width: 50vw;
-      margin-left: 80px;
+      width: 70vw;
       margin-top: 1px;
+      margin: auto;
     }
 
   section#bottom-section {
@@ -291,4 +292,25 @@ div#address-hours, p#restaurant-address, div#restaurant-hours {
 
   #reviews-list p.name {
   	}
+}
+
+@media only screen and (min-width: 670px) {
+  div#address-hours, p#restaurant-address, div#restaurant-hours {
+    width: 30vw;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  section#reviews-container {
+    width: 50vw;
+  }
+
+  td {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  td {
+    font-size: 1em;
+  }
 }
